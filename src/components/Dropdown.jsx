@@ -1,5 +1,5 @@
 import {IoChevronDownSharp} from "react-icons/io5";
-import DropdownButton from "./DropdownButton"
+import DropdownList from "./DropdownList"
 
 const Dropdown = (props) => {
     const nav_item = props.nav_item;
@@ -15,7 +15,7 @@ const Dropdown = (props) => {
             </button>
           </div>
           <div className='dropdown-list'>
-              <DropdownButton nav_item = {nav_item}/>
+              <DropdownList nav_item = {nav_item}/>
           </div>
             
         </div>           

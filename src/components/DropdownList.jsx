@@ -1,4 +1,4 @@
-const DropdownButton = (props)=>{
+const DropdownList = (props)=>{
     const nav_item = props.nav_item;
     const listItems = nav_item.map((item)=>
       <li key={item["name"]}><a className="dropdown-item" href={item["href"]}>{item["name"]}</a></li>
@@ -12,4 +12,4 @@ const DropdownButton = (props)=>{
     );
   }
   
-export default DropdownButton;
+export default DropdownList;
