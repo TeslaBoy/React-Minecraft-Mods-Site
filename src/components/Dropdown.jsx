@@ -10,8 +10,8 @@ const Dropdown = (props) => {
         <div>
           <div className="" >
             <button onClick={handleClick} className="dropdown-button">
-              <label>Categories</label> 
-              <IoChevronDownSharp className="w-4 h-4 ms-2.5 mt-1"/>
+              <label className="hidden md:block w-32">Categories</label> 
+              <IoChevronDownSharp className="w-6 h-4mt-1"/>
             </button>
           </div>
           <div className='dropdown-list'>
