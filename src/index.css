@@ -11,6 +11,13 @@
         @apply bg-gray-800 text-purple-500
         hover:bg-purple-600 hover:text-white;
     }
+    .menu-colors{
+        @apply bg-gray-800 text-purple-500;
+    }
+    .checkbox-colors{
+        @apply bg-gray-800 text-purple-500
+        border-2 border-purple-500 ;
+    }
     .logo-icon{
         @apply main-icon icon-colors
             h-12 w-12 mt-2 mb-2 mx-auto shadow-lg;
@@ -19,11 +26,32 @@
         @apply main-icon icon-colors
             h-12 w-12 mt-2 mb-2 mx-auto shadow-lg;
     }
-    .header-nav{ 
+    /* .header-nav{ 
         @apply main-icon icon-colors
             h-12 min-w-12 uppercase font-bold
             px-4
             border-b-2 border-transparent;
+    } */
+ 
+    .dropdown-button{ 
+        @apply flex items-center px-2
+            text-gray-800 bg-purple-500
+            hover:bg-gray-800 hover:text-purple-500
+            h-8 min-w-8 uppercase font-bold
+            rounded-full 
+            rounded-r-none
+            border-transparent border-2 hover:border-purple-500;
+    }
+    .dropdown-list{
+        @apply absolute -m-2 ml-8 flex 
+            rounded-lg rounded-t-none
+            overflow-hidden 
+            bg-gray-900 border-2 border-purple-500;
+    }
+    .dropdown-item{
+        @apply flex icon-colors w-36 px-2
+        flex-col justify-center
+        size-8;
     }
 
     .theme-button-icon{ 
@@ -37,4 +65,13 @@
     .menu-icon{
         @apply main-icon icon-colors h-12 w-12;
     }
+    .sidebar-filters{
+        @apply main-icon icon-colors justify-start;
+    }
+    .check-box{
+        @apply checkbox-colors rounded-lg
+        m-1
+        w-5 h-5;
+    }
+
 }
