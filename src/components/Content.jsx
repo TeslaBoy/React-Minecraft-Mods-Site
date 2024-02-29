@@ -1,4 +1,5 @@
-let filter_type = "mod"
+import { FaDownload } from "react-icons/fa";
+let filter_type = ""
 
 const Content = (props)=>{
     const data = props.data;
@@ -30,7 +31,10 @@ const Content = (props)=>{
             
           </div>
           <div className='flex px-2 py-1 flex-row items-center'>
-            <button className='icon-colors p-2 font-semibold' type="button">Download</button>
+            <button className='flex icon-colors p-2 font-semibold' type="button">
+              <label className="hidden md:block mr-2">Download</label>
+              <FaDownload  size="20"/>
+              </button>
           </div>
         </div>
     );
