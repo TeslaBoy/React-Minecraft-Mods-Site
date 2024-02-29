@@ -1,14 +1,19 @@
 import {IoChevronDownSharp} from "react-icons/io5";
 import DropdownList from "./DropdownList"
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 const Dropdown = (props) => {
   const [isElementOn, setIsElementOn] = useState(false);
 
   const toggleElement = () => {
     setIsElementOn(prevState => !prevState); 
-    // setIsElementOn(true);
   };
+
+  useEffect(()=>{
+    document.addEventListener("mousedown", 
+      ()=> {setIsElementOn(false);
+    })
+  });
 
     function handleClick() {
       toggleElement();
