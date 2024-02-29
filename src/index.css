@@ -7,16 +7,19 @@
         @apply relative flex items-center justify-center
         transition-all duration-300 ease-linear cursor-pointer;
     }
+    .main-colors-ui{
+        @apply bg-gray-800 text-purple-500  border-purple-500;
+    }
+    .main-colors-ui-alt{
+        @apply text-gray-800 bg-purple-500 border-purple-500;
+    }
+    .main-colors-ui-a-alt{
+        @apply text-gray-800 bg-purple-500 border-purple-500
+            hover:bg-gray-800 hover:text-purple-500;
+    }
     .icon-colors{
-        @apply bg-gray-800 text-purple-500
+        @apply main-colors-ui
         hover:bg-purple-600 hover:text-white;
-    }
-    .menu-colors{
-        @apply bg-gray-800 text-purple-500;
-    }
-    .checkbox-colors{
-        @apply bg-gray-800 text-purple-500
-        border-2 border-purple-500 ;
     }
     .logo-icon{
         @apply main-icon icon-colors
@@ -29,16 +32,14 @@
 
     .dropdown-button{ 
         @apply flex items-center px-1
-            text-gray-800 bg-purple-500
-            hover:bg-gray-800 hover:text-purple-500
+            main-colors-ui-a-alt
             h-8 min-w-8 uppercase font-bold
             rounded-full 
-            rounded-r-none
-            border-transparent border-2 hover:border-purple-500;
+            rounded-r-none border-2;
     }
     .search-input{
-        @apply bg-gray-800 text-purple-500
-        border-2 border-purple-500
+        @apply main-colors-ui
+        border-2 
         w-24
         sm:w-36
         md:w-56
@@ -50,7 +51,7 @@
             rounded-l-none;
     }
     .teg{ 
-        @apply bg-purple-500 text-gray-800
+        @apply main-colors-ui-alt
         rounded-full pl-1 pr-2 h-5
         border-2 border-gray-800
         w-auto max-w-xs
@@ -60,12 +61,10 @@
         font-bold;
     }
     .dropdown-list{
-        @apply absolute -m-0 ml-4 flex 
-            /* max-w-5
-            md:max-w-full */
+        @apply main-colors-ui border-2
+            absolute -m-0 ml-4 flex 
             rounded-lg rounded-t-none
-            overflow-hidden 
-            bg-gray-900 border-2 border-purple-500;
+            overflow-hidden;
     }
     .dropdown-item{
         @apply flex icon-colors w-36 px-2
@@ -74,12 +73,11 @@
     }
 
     .theme-button-icon{ 
-        @apply main-icon
-            text-gray-800 bg-purple-500
-            hover:bg-gray-800 hover:text-purple-500
+        @apply main-icon border-2
+            main-colors-ui-a-alt
             h-8 min-w-8 uppercase font-bold
-             rounded-full
-            border-transparent border-2 hover:border-purple-500;
+            rounded-full
+            ;
     }
     .menu-icon{
         @apply main-icon icon-colors h-12 w-12;
