@@ -6,23 +6,28 @@ import { useState } from "react";
 import Content from "./components/Content"
 
 const nav_item = {
-    activeItem: null,
+    activeItem: "all",
     item: [
-      {name: "mods",}, 
-      {name: "data packs",}, 
-      {name: "resource packs",},
+      {name: "all",             teg: "all",}, 
+      {name: "mods",            teg: "mod",}, 
+      {name: "data packs",      teg: "datapack",} , 
+      {name: "resource packs",  teg: "resourcepack",},
     ],
   }
 
 const App = () => {
   const [search, setSearch] = useState('');
+  const [filter, setFilter] = useState('all');
+  function setFilter_(v){
+    console.log(v);
+  }
     // console.log(search);  
   return(
   <div className="flex flex-col bg-gray-800">
     <header className="flex flex-row items-center justify-between content-start bg-gray-800 mt-0 p-0 border-0">
       <div className='flex flex-row'>
         <Logo href="/"/>
-        <Search onChange={setSearch} state = {nav_item}/>
+        <Search onChangeSearch={setSearch} onChangeFilter={setFilter} state = {nav_item}/>
        {/* { console.log(nav_item.item[0])} */}
       </div>
       <div className='flex flex-row'>
@@ -32,7 +37,7 @@ const App = () => {
       
     </header>
     <main className="flex bg-slate-100">
-      <Content search = {search} data ={data}/>
+      <Content filter = {filter} search = {search} data ={data}/>
     </main>
 
     {/* footer */}

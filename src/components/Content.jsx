@@ -1,9 +1,10 @@
 import { FaDownload } from "react-icons/fa";
-let filter_type = ""
+let filter_type = "all"
 
 const Content = (props)=>{
     const data = props.data;
     const search = props.search;
+    const filter_type = props.filter;
     const content = 
       data.
       filter((item)=>{
@@ -13,7 +14,7 @@ const Content = (props)=>{
       })
       .
       filter((item)=>{
-        return filter_type.toLowerCase() === ''
+        return filter_type.toLowerCase() === 'all'
         ? item
         : item.type.toLowerCase().includes(filter_type)
       })

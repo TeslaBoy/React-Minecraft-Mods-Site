@@ -9,11 +9,11 @@ const Dropdown = (props) => {
     setIsElementOn(prevState => !prevState); 
   };
 
-  useEffect(()=>{
-    document.addEventListener("mousedown", 
-      ()=> {setIsElementOn(false);
-    })
-  });
+  // useEffect(()=>{
+  //   document.addEventListener("mousedown", 
+  //     ()=> {setIsElementOn(false);
+  //   })
+  // });
 
     function handleClick() {
       toggleElement();
@@ -29,7 +29,7 @@ const Dropdown = (props) => {
           {
             isElementOn && 
             <div className='dropdown-list'>
-              <DropdownList state = {props.state}/> 
+              <DropdownList onChangeFilter={props.onChangeFilter} state = {props.state}/> 
             </div>
           }
         </div>           
