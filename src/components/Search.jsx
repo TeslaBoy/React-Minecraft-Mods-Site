@@ -5,7 +5,7 @@ import Dropdown from "./Dropdown"
 const Search = (props) => {
     // console.log(props);
     return(   
-        <div className="flex flex-row icon m-2 mr-3 ">
+        <div className="flex flex-row h-full justify-center icon m-2 mr-3 ">
             <Dropdown state = {props.state}/>
             <div className="flex flex-row">
                 {/* <span className="">Search</span> */}
