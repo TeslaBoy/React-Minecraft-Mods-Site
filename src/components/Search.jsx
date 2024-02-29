@@ -3,7 +3,7 @@ import Dropdown from "./Dropdown"
 
 
 const Search = (props) => {
-    console.log(props);
+    // console.log(props);
     return(   
         <div className="flex flex-row icon m-2 mr-3 ">
             <Dropdown state = {props.state}/>
