@@ -154,12 +154,17 @@ const Content = (props)=>{
     .map((item)=>
       <div className='flex bg-gray-600 p-2 m-1 h-24' key={item.id}>
         <img className="h-20 max-w-full rounded-lg" src={item.img} alt="" />
-        <div className='flex px-2  flex-col w-full overflow-clip'>
-          <label className="text-gray-300 font-bold">{item.name}</label>
-          <label className="text-gray-300">{item.description}</label>
-          <label className="text-gray-300">{item.type}</label>
+        <div className='flex px-2 flex-col w-full'>
+          <label className=" text-gray-300 font-bold">{item.name}</label>
+          <div className='flex h-full overflow-clip'>
+            <label className="text-sm text-gray-300">{item.description}</label>
+          </div>
+          <div className='flex'>
+            <label className="teg">#{item.type}</label>
+          </div>
+          
         </div>
-        <div className='flex px-2 py-1 flex-col'>
+        <div className='flex px-2 py-1 flex-row items-center'>
           <button className='icon-colors p-2 font-semibold' type="button">Download</button>
         </div>
        

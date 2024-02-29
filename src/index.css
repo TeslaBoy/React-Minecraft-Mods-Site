@@ -46,6 +46,16 @@
             rounded-full
             rounded-l-none;
     }
+    .teg{ 
+        @apply bg-purple-500 text-gray-800
+        rounded-full pl-1 pr-2 h-5
+        border-2 border-gray-800
+        w-auto max-w-xs
+        flex flex-col justify-center
+        text-sm
+        uppercase
+        font-bold;
+    }
     .dropdown-list{
         @apply absolute -m-0 ml-4 flex 
             max-w-5
