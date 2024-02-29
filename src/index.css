@@ -14,7 +14,7 @@
         @apply text-gray-800 bg-purple-500 border-purple-500;
     }
     .main-colors-ui-a-alt{
-        @apply text-gray-800 bg-purple-500 border-purple-500
+        @apply main-colors-ui-alt
             hover:bg-gray-800 hover:text-purple-500;
     }
     .icon-colors{
@@ -22,10 +22,6 @@
         hover:bg-purple-600 hover:text-white;
     }
     .logo-icon{
-        @apply main-icon icon-colors
-            h-12 w-12 mt-2 mb-2 mx-auto shadow-lg;
-    }
-    .sidebar-icon{
         @apply main-icon icon-colors
             h-12 w-12 mt-2 mb-2 mx-auto shadow-lg;
     }
@@ -56,9 +52,7 @@
         border-2 border-gray-800
         w-auto max-w-xs
         flex flex-col justify-center
-        text-sm
-        uppercase
-        font-bold;
+        text-sm uppercase font-bold;
     }
     .dropdown-list{
         @apply main-colors-ui border-2
