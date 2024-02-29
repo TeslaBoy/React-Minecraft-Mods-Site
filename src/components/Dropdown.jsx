@@ -9,11 +9,11 @@ const Dropdown = (props) => {
     setIsElementOn(prevState => !prevState); 
   };
 
-  // useEffect(()=>{
-  //   document.addEventListener("mousedown", 
-  //     ()=> {setIsElementOn(false);
-  //   })
-  // });
+  useEffect(()=>{
+    document.addEventListener("mousedown", 
+      ()=> {setIsElementOn(false);
+    })
+  });
 
     function handleClick() {
       toggleElement();

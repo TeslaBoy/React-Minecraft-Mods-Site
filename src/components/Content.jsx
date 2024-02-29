@@ -10,13 +10,13 @@ const Content = (props)=>{
       filter((item)=>{
         return search.toLowerCase() === ''
         ? item
-        : item.name.toLowerCase().includes(search)
+        : item.name.toLowerCase().includes(search.toLowerCase())
       })
       .
       filter((item)=>{
         return filter_type.toLowerCase() === 'all'
         ? item
-        : item.type.toLowerCase().includes(filter_type)
+        : item.type.toLowerCase().includes(filter_type.toLowerCase())
       })
       .map((item)=>
         <div className='flex bg-gray-600 p-2 m-1 h-24' key={item.id}>
@@ -39,7 +39,7 @@ const Content = (props)=>{
           </div>
         </div>
     );
-    // console.log(content[0]!=null);
+
     return(
       <section className='flex flex-col min-h-64 w-full px-4 bg-gray-800 shadow-inner shadow-gray-900'>
         {
