@@ -74,7 +74,7 @@ const sidebar_item = [
 
 const App = () => {
   return(
-  <div className="flex flex-col">
+  <div className="flex flex-col bg-gray-800">
     <header className="flex flex-row items-center justify-between content-start bg-gray-800 mt-0 p-0 border-0">
       <div className='flex flex-row'>
         <Logo href="/"/>
@@ -92,15 +92,13 @@ const App = () => {
     </main>
 
     {/* footer */}
-    <footer className="border-t mt-10 py-10 px-2">
-      <div>
-        <div>
-          <h6 className="font-semibold text-gray-700 mb-4">Company</h6>
-          <ul>
-            <li><a className="inline-block text-gray-500 py-2" href="#">Team</a></li>
-            <li><a className="inline-block text-gray-500 py-2" href="#">About us</a></li>
-          </ul>
-        </div>
+    <footer className="border-t mt-5 py-5 px-2">
+      <div className='flex flex-row items-center'>
+        <h6 className="font-semibold text-gray-200">Company</h6>
+        <ul className='flex flex-row px-10'>
+          <li><a className="px-2 inline-block text-gray-300 py-2" href="#">Team</a></li>
+          <li><a className="px-2 inline-block text-gray-300 py-2" href="#">About us</a></li>
+        </ul>
       </div>
     </footer>
   </div>
