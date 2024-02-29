@@ -6,11 +6,10 @@ const Dropdown = (props) => {
   const [isElementOn, setIsElementOn] = useState(false);
 
   const toggleElement = () => {
-    // setIsElementOn(prevState => !prevState); 
-    setIsElementOn(true);
+    setIsElementOn(prevState => !prevState); 
+    // setIsElementOn(true);
   };
 
-    // const nav_item = props.nav_item;
     function handleClick() {
       toggleElement();
     }
