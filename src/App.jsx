@@ -4,18 +4,49 @@ import ThemeButton from "./components/ThemeButton"
 import Menu from "./components/Menu"
 import Search from "./components/Search"
 
-const nav_item = [
+const nav_item = {
+    activeItem: null,
+    item: [
+      {name: "mods",}, 
+      {name: "data packs",}, 
+      {name: "resource packs",},
+    ],
+  }
+const data = [
   {
-    "name": "mods",
-    "href": "mods",
+    id: 0,
+    name: "Just Enough Items (JEI)",
+    type: "Mod",
+    description: "View Items and Recipes",
+    img: "https://media.forgecdn.net/avatars/thumbnails/29/69/64/64/635838945588716414.jpeg",
   },
   {
-    "name": "data packs",
-    "href": "datapacks",
+    id: 1,
+    name: "Mouse Tweaks",
+    type: "Mod",
+    description: "Enhances inventory management by adding various functions to the mouse buttons",
+    img: "https://media.forgecdn.net/avatars/thumbnails/467/691/64/64/637749969243449870.png",
   },
   {
-    "name": "resource packs",
-    "href": "resourcepacks",
+    id: 2,
+    name: "AppleSkin",
+    type: "Mod",
+    description: "Adds some useful information about food/hunger to the HUD",
+    img: "https://media.forgecdn.net/avatars/thumbnails/47/527/64/64/636066936394500688.png",
+  },
+  {
+    id: 3,
+    name: "Create",
+    type: "Mod",
+    description: "Aesthetic Technology that empowers the Player",
+    img: "https://media.forgecdn.net/avatars/thumbnails/393/435/64/64/637588742363737916.png",
+  },
+  {
+    id: 4,
+    name: "Create Crafts & Additions",
+    type: "Mod",
+    description: "Electrifying the Create mod!",
+    img: "https://media.forgecdn.net/avatars/thumbnails/405/250/64/64/637616939209778882.png",
   },
 ]
 const sidebar_item = [
@@ -43,12 +74,12 @@ const sidebar_item = [
 
 const App = () => {
   return(
-  <div className="flex flex-col  min-h-full">
+  <div className="flex flex-col">
     <header className="flex flex-row items-center justify-between content-start bg-gray-800 mt-0 p-0 border-0">
       <div className='flex flex-row'>
         <Logo href="/"/>
-        <Search nav_item = {nav_item}/>
-        
+        <Search state = {nav_item}/>
+       { console.log(nav_item.item[0])}
       </div>
       <div className='flex flex-row'>
         <ThemeButton/>
@@ -57,8 +88,7 @@ const App = () => {
       
     </header>
     <main className="flex bg-slate-100">
-      
-      <Content/>
+      <Content data ={data}/>
     </main>
 
     {/* footer */}
@@ -120,10 +150,32 @@ const SideBarCategoty = (props)=>{
 
 
 
-const Content = (props)=>(
-  <div className=" bg-slate-600">
-  </div>
-)
+const Content = (props)=>{
+  const data = props.data;
+  const content = data
+    .map((item)=>
+      <div className='flex bg-gray-600 p-2 m-1 h-24' key={item.id}>
+        <img className="h-20 max-w-full rounded-lg" src={item.img} alt="" />
+        <div className='flex px-2  flex-col w-full overflow-clip'>
+          <label className="text-gray-300 font-bold">{item.name}</label>
+          <label className="text-gray-300">{item.description}</label>
+          <label className="text-gray-300">{item.type}</label>
+        </div>
+        <div className='flex px-2 py-1 flex-col'>
+          <button className='icon-colors p-2 font-semibold' type="button">Download</button>
+        </div>
+       
+      </div>
+  );
+  return(
+    <section className='flex flex-col w-full px-4 bg-gray-800'>
+      {content}
+    </section>
+    
+  );
+}
+  
+
 
 const Navigation = (props)=>{
   const nav_item = props.nav_item;

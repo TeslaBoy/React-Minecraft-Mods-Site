@@ -1,9 +1,13 @@
 const DropdownList = (props)=>{
-    const nav_item = props.nav_item;
+    const nav_item = props.state.item;
+    function handleClick() {
+      console.log();
+    }
     const listItems = nav_item.map((item)=>
       <li key={item["name"]}>
-        {/* <a className="dropdown-item" href={item["href"]}>{item["name"]}</a> */}
-        <label className="dropdown-item">{item["name"]}</label>
+        <button onClick={handleClick} className="dropdown-item">
+          {item["name"]}
+        </button>
       </li>
     );
     return(

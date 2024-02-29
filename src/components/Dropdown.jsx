@@ -1,10 +1,18 @@
 import {IoChevronDownSharp} from "react-icons/io5";
 import DropdownList from "./DropdownList"
+import React, {useState} from "react";
 
 const Dropdown = (props) => {
-    const nav_item = props.nav_item;
+  const [isElementOn, setIsElementOn] = useState(false);
+
+  const toggleElement = () => {
+    // setIsElementOn(prevState => !prevState); 
+    setIsElementOn(true);
+  };
+
+    // const nav_item = props.nav_item;
     function handleClick() {
-      console.log("Button click!");
+      toggleElement();
     }
     return(   
         <div>
@@ -14,10 +22,12 @@ const Dropdown = (props) => {
               <IoChevronDownSharp className="w-6 h-4mt-1"/>
             </button>
           </div>
-          <div className='dropdown-list'>
-              <DropdownList nav_item = {nav_item}/>
-          </div>
-            
+          {
+            isElementOn && 
+            <div className='dropdown-list'>
+              <DropdownList state = {props.state}/> 
+            </div>
+          }
         </div>           
   )
 }
