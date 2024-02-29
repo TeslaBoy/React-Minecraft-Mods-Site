@@ -65,13 +65,47 @@ export const data = [
     },
     {
       id: 9,
-      name: "text",
+      name: "Stay True",
       type: "ResourcePack",
-      description: "text",
-      img: "text",
+      description: "Staying True to The Original Textures.",
+      img: "https://media.forgecdn.net/avatars/thumbnails/274/491/64/64/637258639542653246.png",
     },
-
-    
+    //===
+    {
+      id: 10,
+      name: "BedXP",
+      type: "DataPack",
+      description: "This mod allows for the gaining of experience during nighttime rest, meaning you will have...",
+      img: "https://media.forgecdn.net/avatars/thumbnails/944/583/64/64/638428555476001054.png",
+    },
+    {
+      id: 11,
+      name: "Healing Bed",
+      type: "DataPack",
+      description: "Looking for a way to heal your character faster in Minecraft? Now you can do...",
+      img: "https://media.forgecdn.net/avatars/thumbnails/948/657/64/64/638436110260849935.png",
+    },
+    {
+      id: 12,
+      name: "Hallucinate",
+      type: "DataPack",
+      description: "This is Hallucinate! Prepare to be haunted by the fearsome Warden! It will relentlessly pursue...",
+      img: "https://media.forgecdn.net/avatars/thumbnails/944/492/64/64/638428415105046898.png",
+    },
+    {
+      id: 13,
+      name: "Epic Fight - Bronze And Iron",
+      type: "DataPack",
+      description: "make Let's Forge Bronze And Iron mod be compatible with epic fight mod",
+      img: "https://media.forgecdn.net/avatars/thumbnails/947/923/64/64/638434665826494683.png",
+    },
+    {
+      id: 14,
+      name: "Herom's Physgun",
+      type: "DataPack",
+      description: "Adds Physgun (Gravity gun) in your game",
+      img: "https://media.forgecdn.net/avatars/thumbnails/951/690/64/64/638441304910926914.png",
+    },
 
  
   ]
