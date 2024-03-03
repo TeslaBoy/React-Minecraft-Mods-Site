@@ -20,7 +20,7 @@ const Content = (props)=>{
         : item.type.toLowerCase().includes(filter_type.toLowerCase())
       })
       .map((item)=>
-        <Card item = {item}/>
+        <Card item = {item} key={item.id}/>
     );
 
     return(
