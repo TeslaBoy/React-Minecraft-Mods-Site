@@ -21,18 +21,16 @@ const App = () => {
   function setFilter_(v){
     console.log(v);
   }
-    // console.log(search);  
+
   return(
   <div className="flex flex-col bg-gray-800">
     <header className="flex flex-row items-center justify-between content-start bg-gray-800 mt-0 p-0 border-0">
       <div className='flex flex-row'>
         <Logo href="/"/>
         <Search onChangeSearch={setSearch} onChangeFilter={setFilter} state = {nav_item}/>
-       {/* { console.log(nav_item.item[0])} */}
       </div>
       <div className='flex flex-row'>
         <ThemeButton/>
-        {/* <Menu/> */}
       </div>
       
     </header>
@@ -40,7 +38,6 @@ const App = () => {
       <Content filter = {filter} search = {search} data ={data}/>
     </main>
 
-    {/* footer */}
     <footer className="border-t mt-5 py-5 px-2">
       <div className='flex flex-row items-center'>
         <h6 className="font-semibold text-gray-200">Company</h6>
