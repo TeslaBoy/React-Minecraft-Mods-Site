@@ -21,7 +21,7 @@ const Card = ({item}) => {
               </button>
           </div>
         </div>
-    )
+)
 }
 
 export default Card;

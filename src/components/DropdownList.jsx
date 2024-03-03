@@ -1,11 +1,10 @@
 const DropdownList = (props)=>{
     const nav_item = props.state.item;
-    // function handleClick(e) {
-    //   console.log(e.target.value);
-    // }
+
     const listItems = nav_item.map((item)=>
       <li key={item.name}>
-        <button value={item.teg} onClick={props.onChangeFilter} className="dropdown-item">
+        <button value={item.teg} onClick={props.onChangeFilter} 
+                className="dropdown-item">
           {item.name}
         </button>
       </li>

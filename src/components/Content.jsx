@@ -24,7 +24,7 @@ const Content = (props)=>{
     );
 
     return(
-      <section className='flex flex-col min-h-64 w-full px-4 bg-gray-800 shadow-inner shadow-gray-900'>
+      <section className='content'>
         {
         content[0]!=null 
         ? content 

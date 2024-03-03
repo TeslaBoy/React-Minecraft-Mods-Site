@@ -16,7 +16,6 @@ const Dropdown = (props) => {
         if (menuRef.current)
           if (!menuRef.current.contains(e.target))
             setIsElementOn(false);
-          // console.log(menuRef.current);
         })
   });
 
@@ -34,7 +33,8 @@ const Dropdown = (props) => {
           {
             isElementOn && 
             <div className='dropdown-list' ref={menuRef}>
-              <DropdownList onChangeFilter={props.onChangeFilter} state = {props.state}/> 
+              <DropdownList onChangeFilter={props.onChangeFilter} 
+                            state = {props.state}/> 
             </div>
           }
         </div>           
